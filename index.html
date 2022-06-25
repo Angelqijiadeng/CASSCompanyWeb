@@ -4,19 +4,167 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Testing</title>
+    <title>CASS Homepage</title>
   </head>
+  <style>
+    body {
+      margin-left: 80px;
+      margin-right: 80px;
+      margin-top: 16px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    .container {
+      /* border:2px solid black; */
+      /* padding:100px 100px; */
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+    li {
+      float: right;
+    }
+    li a,
+    .dropbtn {
+      display: inline-block;
+      color: #000;
+      text-align: center;
+      padding: 14px 8px;
+      text-decoration: none;
+      /* font-weight: bold; */
+      font-size: 17px;
+    }
+    li a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: rgb(255, 170, 83);
+    }
+    li.dropdown {
+      display: inline-block;
+    }
+    .drop {
+      display: none;
+      position: absolute;
+      background-color: rgb(255, 170, 83);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+    .drop a {
+      color: #000;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      font-weight: lighter;
+      font-size: 16px;
+    }
+    .drop a:hover {
+      background-color: rgb(132, 194, 37);
+      /* background-color:rgb(0,141,214); */
+      /* background-color:white; */
+    }
+    .dropdown:hover .drop {
+      display: block;
+    }
+    img {
+      width: 160px;
+    }
+    h1 {
+      text-align: center;
+      color: rgb(255, 170, 83);
+      font-size: 42px;
+      /* border:2px solid black; */
+      margin-top:10px;
+      margin-bottom:18px;
+      padding:0;
+    }
+    video {
+      height:auto;
+      width: 100%;
+      /* border:5px solid black; */
+      float: top;
+      margin:0;
+      padding:0;
+      /* margin:50px;
+      padding:0; */
+    }
+    h2 {
+      text-align: center;
+      /* color: rgb(255, 170, 83); */
+      color:rgb(0,141,214);
+      /* color:rgb(132, 194, 37); */
+      font-size: 36px;
+      /* border:2px solid black; */
+      margin-top:20px;
+      margin-bottom:0px;
+      padding:0;
+      font-weight:500;
+    }
+    h3 {
+      text-align: center;
+      /* color: rgb(255, 170, 83); */
+      color: rgb(132, 194, 37);
+      font-size: 32px;
+      /* border:2px solid black; */
+      margin-top:40px;
+      padding:0;
+    }
+    p {
+      text-align: center;
+      font-size: 20px;
+      color:#000;
+      /* border:2px solid black; */
+      margin-top:40px;
+      padding:0;
+    }
+  </style>
   <body>
-    <p>
-      This is a first line for the web page.<iframe
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2951.1262158214518!2d-71.2667591!3d42.2971722!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e381418b1914ef%3A0x4ef71f3899e76a89!2sBabson%20College!5e0!3m2!1sen!2sus!4v1655263025709!5m2!1sen!2sus"
-        width="400"
-        height="300"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
-    </p>
+    <ul class="container">
+      <a href="index.html"
+        ><img src="images/logo_01.png" alt="logo" title="logo" />
+      </a>
+      <li class="dropdown">
+        <a class="dropbtn">About</a>
+        <div class="drop">
+          <a>Our Story</a>
+          <a>Meet Angel</a>
+          <a>Team</a>
+          <a>Contact</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a class="dropbtn">Articles</a>
+        <div class="drop">
+          <a>News</a>
+          <a>Government Visit</a>
+        </div>
+      </li>
+      <li><a>Disabled Employment Program</a></li>
+      <li><a>Silent Restaurant</a></li>
+      <li><a>Silent Delivery</a></li>
+    </ul>
+    <div>
+      <h1>Silent Delivery (Business Meals)</h1>
+      <video autoplay loop muted playsinline>
+        <source src="videos/Clip1.mp4" type="video/mp4" />
+      </video>
+      <h2>
+        “ Solve employment problem and empower the disabled people ”
+      </h2>
+      <h3>Love is Forever. Food is for Tasty.</h3>
+      <p>
+        CASS Silent Delivery is dedicated to building a "Community-based Kitchen
+        System” in China. It is a social enterprise mainly provides business
+        meals to solve the employment and empower the disabled people. We are
+        passing love through food. At present, we have 5 Community-based
+        Kitchens, 35 disabled employees, and 32 deaf employees. We expect to
+        employ 1,000 disabled workers and enable 100 disabled people to start
+        their own business while providing 500,000 elder meals in five years.
+      </p>
+      <button>Get Meals</button>
+    </div>
   </body>
 </html>
