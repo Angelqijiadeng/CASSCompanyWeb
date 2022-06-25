@@ -41,6 +41,7 @@
     li a:hover,
     .dropdown:hover .dropbtn {
       background-color: rgb(255, 170, 83);
+      cursor: pointer;
     }
     li.dropdown {
       display: inline-block;
@@ -63,11 +64,13 @@
     }
     .drop a:hover {
       background-color: rgb(132, 194, 37);
+      cursor: pointer;
       /* background-color:rgb(0,141,214); */
       /* background-color:white; */
     }
     .dropdown:hover .drop {
       display: block;
+      cursor: pointer;
     }
     img {
       width: 160px;
@@ -77,31 +80,31 @@
       color: rgb(255, 170, 83);
       font-size: 42px;
       /* border:2px solid black; */
-      margin-top:10px;
-      margin-bottom:18px;
-      padding:0;
+      margin-top: 10px;
+      margin-bottom: 18px;
+      padding: 0;
     }
     video {
-      height:auto;
+      height: auto;
       width: 100%;
       /* border:5px solid black; */
       float: top;
-      margin:0;
-      padding:0;
+      margin: 0;
+      padding: 0;
       /* margin:50px;
       padding:0; */
     }
     h2 {
       text-align: center;
       /* color: rgb(255, 170, 83); */
-      color:rgb(0,141,214);
+      color: rgb(0, 141, 214);
       /* color:rgb(132, 194, 37); */
       font-size: 36px;
       /* border:2px solid black; */
-      margin-top:20px;
-      margin-bottom:0px;
-      padding:0;
-      font-weight:500;
+      margin-top: 20px;
+      margin-bottom: 0px;
+      padding: 0;
+      font-weight: 500;
     }
     h3 {
       text-align: center;
@@ -109,16 +112,37 @@
       color: rgb(132, 194, 37);
       font-size: 32px;
       /* border:2px solid black; */
-      margin-top:40px;
-      padding:0;
+      margin-top: 35px;
+      padding: 0;
     }
     p {
       text-align: center;
       font-size: 20px;
-      color:#000;
+      color: #000;
       /* border:2px solid black; */
-      margin-top:40px;
-      padding:0;
+      margin-top: 35px;
+      margin-bottom: 0;
+      padding: 0;
+    }
+    .center {
+      background-color:none;
+      border:none;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button{
+      background-color: rgb(255, 170, 83);
+      border:none;
+      color: #000;
+      padding: 15px 32px;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+      text-align: center;
     }
   </style>
   <body>
@@ -151,9 +175,7 @@
       <video autoplay loop muted playsinline>
         <source src="videos/Clip1.mp4" type="video/mp4" />
       </video>
-      <h2>
-        “ Solve employment problem and empower the disabled people ”
-      </h2>
+      <h2>“ Solve employment problem and empower the disabled people ”</h2>
       <h3>Love is Forever. Food is for Tasty.</h3>
       <p>
         CASS Silent Delivery is dedicated to building a "Community-based Kitchen
@@ -164,7 +186,8 @@
         employ 1,000 disabled workers and enable 100 disabled people to start
         their own business while providing 500,000 elder meals in five years.
       </p>
-      <button>Get Meals</button>
+      <div class="center"><button><a>Get Meals</a></button></div>
     </div>
+    
   </body>
 </html>
