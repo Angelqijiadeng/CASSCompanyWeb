@@ -72,6 +72,9 @@
       display: block;
       cursor: pointer;
     }
+    .sticky {
+      position: fixed;
+    }
     img {
       width: 160px;
     }
@@ -91,6 +94,7 @@
       float: top;
       margin: 0;
       padding: 0;
+      border-radius: 4px;
       /* margin:50px;
       padding:0; */
     }
@@ -108,8 +112,8 @@
     }
     h3 {
       text-align: center;
-      /* color: rgb(255, 170, 83); */
-      color: rgb(132, 194, 37);
+      color: rgb(255, 170, 83);
+      /* color: rgb(132, 194, 37); */
       font-size: 32px;
       /* border:2px solid black; */
       margin-top: 35px;
@@ -117,32 +121,106 @@
     }
     p {
       text-align: center;
-      font-size: 20px;
-      color: #000;
+      font-size: 22px;
+      color: rgb(63, 65, 61);
       /* border:2px solid black; */
       margin-top: 35px;
       margin-bottom: 0;
       padding: 0;
+      line-height: 1.4em;
     }
     .center {
-      background-color:none;
-      border:none;
-      margin-top: 20px;
+      background-color: none;
+      border: none;
+      margin-top: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    button{
+    button {
       background-color: rgb(255, 170, 83);
-      border:none;
+      border: none;
       color: #000;
       padding: 15px 32px;
       text-decoration: none;
       display: inline-block;
-      font-size: 16px;
+      font-size: 20px;
       cursor: pointer;
       border-radius: 6px;
       text-align: center;
+      margin-bottom: 0;
+    }
+    .name {
+      text-align: left;
+      color: rgb(255, 170, 83);
+      /* color: rgb(132, 194, 37); */
+      font-size: 36px;
+      /* border:2px solid black; */
+      margin-top: 50px;
+      margin-bottom: 0;
+      padding: 0;
+      position: relative;
+      left: 10px;
+      font-weight: bolder;
+    }
+    .back {
+      /* border: 8px solid rgb(132, 194, 37); */
+      border-radius: 2px;
+      margin-top: 5px;
+      margin-left: 180px;
+      margin-right: 180px;
+      display: grid;
+      /* grid-template-rows:50% 50%; */
+      grid-template-rows: 225px 225px;
+      grid-template-columns: 55% 45%;
+      grid-template-areas:
+        "left right"
+        "left bottom";
+    }
+    .silent {
+      grid-area: left;
+    }
+    #silent {
+      width: auto;
+      height: 100%;
+      position: relative;
+      left: -30px;
+    }
+    .list {
+      grid-area: right;
+      /* border: 2px solid black; */
+      position: relative;
+      left: -30px;
+      top: 10px;
+      /* background-color: rgb(255, 170, 83); */
+    }
+    .first {
+      font-size: 22px;
+      font-weight: bolder;
+      padding: 0;
+      line-height: 1.3em;
+      color: rgb(0, 141, 214);
+      position: relative;
+      left: 10px;
+    }
+    .second {
+      font-size: 16px;
+      font-weight: initial;
+      position: relative;
+      left: 18px;
+      color: #000;
+      padding: 2px;
+      line-height: 1.15em;
+    }
+    .meal {
+      grid-area: bottom;
+    }
+    #meal {
+      height: 75%;
+      width: auto;
+      position: relative;
+      top: 10px;
+      left: -20px;
     }
   </style>
   <body>
@@ -186,8 +264,61 @@
         employ 1,000 disabled workers and enable 100 disabled people to start
         their own business while providing 500,000 elder meals in five years.
       </p>
-      <div class="center"><button><a>Get Meals</a></button></div>
+      <div class="center">
+        <button><a>Get Meals</a></button>
+      </div>
+      <div class="name">Silent Delivery</div>
+      <div class="back">
+        <div class="silent">
+          <img
+            id="silent"
+            src="images/silent.jpeg"
+            alt="silent"
+            title="silent"
+          />
+        </div>
+        <div class="list">
+          <div class="first">
+            Business Meals For
+            <div class="second">Working</div>
+            <div class="second">Meeting/Conference</div>
+            <div class="second">Training/Camp</div>
+            <div class="second">Exhibition</div>
+          </div>
+          <div class="first">Tea Break</div>
+          <div class="first">Canteen Management</div>
+          <div class="first">Canteen Contracting</div>
+        </div>
+        <div class="meal">
+          <img id="meal" src="images/meal.jpg" alt="meal" title="meal" />
+        </div>
+      </div>
+      <div class="name">Headquarter</div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.980097331034!2d103.96656595007697!3d30.606324598676327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36efc3d1d7829609%3A0x5abb732a9c04a720!2zQ2hpbmEsIFNpIENodWFuIFNoZW5nLCBDaGVuZyBEdSBTaGksIFd1IEhvdSBRdSwg6YeR6Iqx5qiq6KGXNjjlj7cg6YKu5pS_57yW56CBOiA2MTAwNDY!5e0!3m2!1sen!2sus!4v1656207840393!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </div>
-    
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffest >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 </html>
