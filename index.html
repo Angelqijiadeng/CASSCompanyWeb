@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-type" content="text/html;" charset="gb2312" />
     <title>CASS Homepage</title>
   </head>
   <style>
@@ -73,9 +72,11 @@
       display: block;
       cursor: pointer;
     }
-    .sticky {
+    /* nav.container {
       position: fixed;
-    }
+      top: 0;
+      left:0;
+    } */
     img {
       width: 160px;
     }
@@ -229,8 +230,10 @@
       border-radius: 8px;
     }
     .border {
-      /* border: 5px solid black; */
+      border: 5px solid black;
       margin-top: 20px;
+      position: relative;
+      left: 35px;
     }
     #partners {
       width: 98%;
@@ -239,7 +242,22 @@
       float: right;
       border-radius: 6px;
       margin-top: 20px;
+      margin-bottom: 80px;
     }
+    /* .bottom{
+      background-color: rgb(255, 170, 83);
+      font-size:18px;
+      margin:50px;
+      float:left;
+
+    }
+    .bottom div{
+      float:left;
+      display:block;
+      color:black;
+      text-align:center;
+
+    } */
   </style>
   <body>
     <ul class="container">
@@ -249,22 +267,22 @@
       <li class="dropdown">
         <a class="dropbtn">About</a>
         <div class="drop">
-          <a>Our Story</a>
-          <a>Meet Angel</a>
-          <a>Team</a>
-          <a>Contact</a>
+          <a href="social.html">Social Enterprise</a>
+          <a href="angel.html">Meet Angel</a>
+          <a href="team.html">Our Team</a>
+          <a href="contact.html">Contact</a>
         </div>
       </li>
       <li class="dropdown">
         <a class="dropbtn">Articles</a>
         <div class="drop">
-          <a>News</a>
-          <a>Government Visit</a>
+          <a href="news.html">News</a>
+          <a href="government.html">Government Visit</a>
         </div>
       </li>
-      <li><a>Disabled Employment Program</a></li>
-      <li><a>Silent Restaurant</a></li>
-      <li><a>Silent Delivery</a></li>
+      <li><a href="disabled.html">Disabled Employment Program</a></li>
+      <li><a href="restaurant.html">Silent Restaurant</a></li>
+      <li><a href="delivery.html">Silent Delivery</a></li>
     </ul>
     <div>
       <h1>Silent Delivery (Business Meals)</h1>
@@ -332,22 +350,23 @@
           title="partners"
         />
       </div>
+      <!-- <div class="bottom">
+        <div>Email:social.enterprise@sccass.cn</div>
+        <div>Tel: +86 180 1142 9177; +86 180 3081 1498</div>
+        <div>&copy 2022 Chengdu CASS Food & Management Social Enterprise Co., LTD. </div>
+      </div> -->
     </div>
-    <script>
+    <!-- <script>
+      var navbar = document.getElementById("navbar");
+      var container = document.getElementById("container");
+
       window.onscroll = function () {
-        myFunction();
-      };
-
-      var navbar = document.getElementById("navar");
-      var sticky = navbar.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffest >= sticky) {
-          navbar.classList.add("sticky");
+        if (window.pageYOffset >= container.offsetTop) {
+          navbar.classList.add("container");
         } else {
-          navbar.classList.remove("sticky");
+          navbar.classList.remove("container");
         }
-      }
-    </script>
+      };
+    </script> -->
   </body>
 </html>
