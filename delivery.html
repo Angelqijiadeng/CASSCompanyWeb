@@ -73,6 +73,43 @@
       .bottom {
         margin-top: 30px;
       }
+      h2 {
+        text-align: left;
+        color: rgb(0, 141, 214);
+        margin-top: 25px;
+        margin-bottom: 10px;
+        padding: 0;
+        font-weight: bolder;
+      }
+      #delivery {
+        width: 80%;
+        height: auto;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .community {
+        /* text-align: left; */
+        font-size: 22px;
+        color: rgb(63, 65, 61);
+        /* border:2px solid black; */
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding: 0;
+        line-height: 0.8em;
+        margin-left: 35px;
+      }
+      #bundleA, #bundleB,#bundleC,#premium{
+        font-size: 22px;
+        color: rgb(63, 65, 61);
+        /* border:2px solid black; */
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding: 0;
+        line-height: 0.8em;
+        margin-left: 35px;
+      }
     </style>
   </head>
   <body>
@@ -102,6 +139,7 @@
     </ul>
     <div class="page">
       <h1>Silent Delivery</h1>
+      <h2>Products (Business Meals)</h2>
       <div class="back">
         <div class="silent">
           <img
@@ -127,6 +165,25 @@
           <img id="meal" src="images/meal.jpg" alt="meal" title="meal" />
         </div>
       </div>
+      <h2>Services (Delivery in Great Chengdu, China Area)</h2>
+      <img
+        id="delivery"
+        src="images/delivery.png"
+        alt="delivery"
+        title="delivery"
+      />
+      <h2>Community-Based Kitchen System (5 Kitchens)</h2>
+      <p class="community">Jinhua Community (Headquarter)</p>
+      <p class="community">Huangmen Community (West China Hospital)</p>
+      <p class="community">Chaoyin Community</p>
+      <p class="community">Wuding Community</p>
+      <p class="community">Guandu Community</p>
+      <h2>Get Meals (Pricing - Click to display)</h2>
+      <h2 id="thanks"></h2>
+      <p id="bundleA">Bundle A</p>
+      <p id="bundleB">Bundle B</p>
+      <p id="bundleC">Bundle C</p>
+      <p id="premium">Premium</p>
     </div>
     <div class="bottom">
       <div id="text_one">
@@ -161,5 +218,58 @@
       </div>
       <div id="text_six"><a class="none" href="sitemap.html">Sitemap</a></div>
     </div>
+    <script>
+      const thanks = document.getElementById("thanks");
+      function bundleA(){
+        const bundleA = document.getElementById("bundleA");
+
+        bundleA.innerText = "Bundle A: 15 RMB including two meat dishes and one vegetable dishes";
+        bundleA.style.color = "rgb(255, 170, 83)";
+        thanks.innerText = "Thanks for your support to our deaf community! Please contact us and make purchase."
+        thanks.style.color = "red";
+      }
+
+      function bundleB(){
+        const bundleB = document.getElementById("bundleB");
+        const contact = document.getElementById("contact")
+
+        bundleB.innerText = "Bundle B: 20 RMB including two meat dishes and two vegetable dishes";
+        bundleB.style.color = "rgb(255, 170, 83)";
+        thanks.innerText = "Thanks for your support to our deaf community! Please contact us and make purchase."
+        thanks.style.color = "red";
+        contact.a.href = "contact.html";
+      }
+
+      function bundleC(){
+        const bundleC = document.getElementById("bundleC");
+
+        bundleC.innerText = "Bundle C: 30 RMB including three meat dishes and two vegetable dishes";
+        bundleC.style.color = "rgb(255, 170, 83)";
+        thanks.innerText = "Thanks for your support to our deaf community! Please contact us and make purchase."
+        thanks.style.color = "red";
+      }
+
+      function premium(){
+        const premium = document.getElementById("premium");
+
+        premium.innerText = "Premium: 50 RMB including three meat dishes, two vegetable dishe, soup, and fruits";
+        premium.style.color = "rgb(255, 170, 83)";
+        thanks.innerText = "Thanks for your support to our deaf community! Please contact us and make purchase."
+        thanks.style.color = "red";
+      }
+
+      document.getElementById("bundleA").onclick = function (){
+        bundleA();
+      };
+      document.getElementById("bundleB").onclick = function (){
+        bundleB();
+      };
+      document.getElementById("bundleC").onclick = function (){
+        bundleC();
+      };
+      document.getElementById("premium").onclick = function (){
+        premium();
+      };
+    </script>
   </body>
 </html>

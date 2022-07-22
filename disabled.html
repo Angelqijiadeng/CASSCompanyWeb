@@ -20,11 +20,7 @@
         margin-top: 20px;
         /* margin-bottom: 80px; */
       }
-      /* .page {
-        border: 5px solid red;
-      }
     </style>
-    */
   </head>
   <body>
     <ul class="container">
@@ -93,5 +89,29 @@
       </div>
       <div id="text_six"><a class="none" href="sitemap.html">Sitemap</a></div>
     </div>
+    <script>
+      function enlargeImage() {
+        let width = document.getElementById("sign").width;
+        console.log(width);
+        width = width * 1.5;
+        console.log(width);
+        document.getElementById("sign").width = width;
+      }
+
+      function reduceImage() {
+        let width = document.getElementById("sign").width;
+        console.log(width);
+        width = width / 1.5;
+        console.log(width);
+        document.getElementById("sign").width = width;
+      }
+      document.getElementById("sign").onmouseover = function () {
+        enlargeImage();
+      };
+
+      document.getElementById("sign").onmouseout = function () {
+        reduceImage();
+      };
+    </script>
   </body>
 </html>
