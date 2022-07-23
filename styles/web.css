@@ -133,7 +133,9 @@ h1 {
     margin-bottom:20px;
 }
 #text_three,#text_four{
-    margin-top:10px;
+    position:relative;
+    top:20px;
+    /* margin-top:10px; */
     margin-bottom:20px;
 }
 #text_five,#text_six{
