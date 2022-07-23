@@ -129,8 +129,15 @@ h1 {
     margin-left: 60px;
     margin-right: 60px;
 }
-#text_one,#text_two,#text_three,#text_four{
+#text_one,#text_two{
     margin-bottom:20px;
+}
+#text_three,#text_four{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+#text_five,#text_six{
+    margin-top:10px;
 }
 .none{
     /* text-decoration:none; */
