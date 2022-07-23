@@ -134,12 +134,14 @@ h1 {
 }
 #text_three,#text_four{
     position:relative;
-    top:60px;
+    top:30px;
     /* margin-top:10px; */
-    margin-bottom:20px;
+    /* margin-bottom:20px; */
 }
 #text_five,#text_six{
-    margin-top:10px;
+    /* margin-top:10px; */
+    position:relative;
+    top:30px;
 }
 .none{
     /* text-decoration:none; */
