@@ -140,7 +140,7 @@
       </div>
       <h3>Feedback Form</h3>
       <div class="feedback">
-        <form action="data.html" method="get">
+        <form action="" method="get">
           <label for="fname">First Name</label>
           <input
             type="text"
@@ -155,6 +155,8 @@
             name="lastname"
             placeholder="Your Last Name..."
           />
+          <label for="age">Age</label>
+          <input type="text" id="age" name="age" placeholder="Your Age..." />
           <label for="email">Email</label>
           <input
             type="text"
@@ -169,11 +171,12 @@
             placeholder="Please Give Your Feedback..."
             style="height: 200px"
           ></textarea>
-          <input type="submit" value="Submit" />
+          <input id="submit" type="submit" value="Submit" />
           <input type="reset" value="Reset" />
         </form>
       </div>
     </div>
+    <button id="top">Top</button>
     <div class="bottom">
       <div id="text_one">
         Over the past four years, CASS provided job opportunities for more than
@@ -207,5 +210,37 @@
       </div>
       <div id="text_six"><a class="none" href="sitemap.html">Sitemap</a></div>
     </div>
+    <script src="web.js">
+      function validateForm() {
+        const myForm = document.querySelector("form");
+        let firstname = myForm.firstname.value;
+        let lastname = myForm.lastname.value;
+        let age = myForm.age.value;
+        let email = myForm.email.value;
+        let feedback = myForm.feedback.value;
+        const heading = document.querySelector("h3");
+
+        if (
+          firstname.length == 0 ||
+          lastname.length == 0 ||
+          age.length == 0 ||
+          email.length == 0 ||
+          feedback.length == 0
+        ) {
+          alert("Please fill the information!");
+        } else if (isNaN(age)) {
+          alert("Pleae put a numeric value!");
+        } else if (0 <= age <= 100){
+          alert("Please enter your proper age!")
+        }
+          else {
+          alert("Thanks for Your Feedback!");
+        }
+      }
+
+      document.getElementById("submit").onclick = function () {
+        validateForm();
+      };
+    </script>
   </body>
 </html>

@@ -35,7 +35,7 @@
       .news {
         text-decoration: none;
         color: rgb(255, 170, 83);
-        font-weight:bold;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -66,7 +66,7 @@
     </ul>
     <div class="page">
       <div>
-        <h1>News</h1>
+        <h1 id="news">News</h1>
       </div>
       <table>
         <tr>
@@ -75,7 +75,7 @@
           <th>Link</th>
         </tr>
         <tr>
-          <td>Xinhua News</td>
+          <td id="xinhua">Xinhua News</td>
           <td>
             <img
               class="images"
@@ -93,7 +93,7 @@
           </td>
         </tr>
         <tr>
-          <td>People's Daily</td>
+          <td id="people">People's Daily</td>
           <td>
             <img
               class="images"
@@ -111,7 +111,7 @@
           </td>
         </tr>
         <tr>
-          <td>Sichuan News</td>
+          <td id="sichuan">Sichuan News</td>
           <td>
             <img
               class="images"
@@ -130,6 +130,7 @@
         </tr>
       </table>
     </div>
+    <button id="top">Top</button>
     <div class="bottom">
       <div id="text_one">
         Over the past four years, CASS provided job opportunities for more than
@@ -163,5 +164,33 @@
       </div>
       <div id="text_six"><a class="none" href="sitemap.html">Sitemap</a></div>
     </div>
+    <script src="web.js">
+      const news = document.getElementById("news");
+
+      function xinhuaOne() {
+        news.innerText = "Xinhua News";
+        news.style.color = "rgb(132, 194, 37)";
+      }
+
+      function peopleOne() {
+        news.innerText = "People's Daily";
+        news.style.color = "rgb(132, 194, 37)";
+      }
+
+      function sichuanOne() {
+        news.innerText = "Sichuan News";
+        news.style.color = "rgb(132, 194, 37)";
+      }
+
+      document.getElementById("xinhua").onmouseover = function () {
+        xinhuaOne();
+      };
+      document.getElementById("people").onmouseover = function () {
+        peopleOne();
+      };
+      document.getElementById("sichuan").onmouseover = function () {
+        sichuanOne();
+      };
+    </script>
   </body>
 </html>

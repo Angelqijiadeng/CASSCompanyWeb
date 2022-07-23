@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="styles/web.css" />
     <style>
       .pic {
-        width: 100%;
+        width: 80%;
         height: auto;
-        float: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 0px;
         margin-bottom: 10px;
         border-radius: 8px;
@@ -45,14 +47,19 @@
     </ul>
     <div class="page">
       <div>
-        <h1>Social Enterprise</h1>
+        <h1 id="heading">Social Enterprise</h1>
       </div>
       <div id="last">
-        <img class="pic" src="images/cass.jpeg" alt="cass" title="cass" />
-        <img class="pic" src="images/wei.jpeg" alt="wei" title="wei" />
-        <img class="pic" src="images/all.jpeg" alt="all" title="all" />
+        <img
+          id="image"
+          class="pic"
+          src="images/cass.jpeg"
+          alt="cass"
+          title="cass"
+        />
       </div>
     </div>
+    <button id="top">Top</button>
     <div class="bottom">
       <div id="text_one">
         Over the past four years, CASS provided job opportunities for more than
@@ -86,5 +93,27 @@
       </div>
       <div id="text_six"><a class="none" href="sitemap.html">Sitemap</a></div>
     </div>
+    <script>
+      const slides = ["images/cass.jpeg", "images/wei.jpeg", "images/all.jpeg"];
+      const texts = ["CASS","He Wei","All Societies"];
+
+      let i = 0;
+      function slideShow() {
+        const image = document.getElementById("image");
+        const heading = document.getElementById("heading");
+        if (i === slides.length) {
+          i = 0;
+        }
+        image.src = slides[i];
+        heading.innerText = "Social Enterprise: " + texts[i];
+        i++;
+        setTimeout(slideShow, 1000);
+      }
+
+      document.querySelector("body").onload = function () {
+        slideShow();
+      };
+    </script>
+    <script src="web.js"></script>
   </body>
 </html>
