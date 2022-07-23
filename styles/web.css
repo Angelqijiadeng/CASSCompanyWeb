@@ -19,10 +19,12 @@ body {
     padding: 0; */
     overflow: hidden;
     background-color: rgb;
+    z-index:1;
 }
 
 li {
     float: right;
+    z-index:1;
 }
 
 li a,
@@ -34,16 +36,19 @@ li a,
     text-decoration: none;
     /* font-weight: bold; */
     font-size: 17px;
+    z-index:1;
 }
 
 li a:hover,
 .dropdown:hover .dropbtn {
     background-color: rgb(255, 170, 83);
     cursor: pointer;
+    z-index:1;
 }
 
 li.dropdown {
     display: inline-block;
+    z-index:1;
 }
 
 .drop {
@@ -52,6 +57,7 @@ li.dropdown {
     background-color: rgb(255, 170, 83);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index:1;
 }
 
 .drop a {
@@ -62,6 +68,7 @@ li.dropdown {
     text-align: left;
     font-weight: lighter;
     font-size: 16px;
+    z-index:1;
 }
 
 .drop a:hover {
@@ -75,10 +82,12 @@ li.dropdown {
 .dropdown:hover .drop {
     display: block;
     cursor: pointer;
+    z-index:1;
 }
 
 img {
     width: 160px;
+    z-index:1;
     /* padding-left: 80px; */
 }
 
